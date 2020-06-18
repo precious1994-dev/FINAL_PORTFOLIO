@@ -5,9 +5,9 @@
     <body class="bg-warning">
     <div class="container-fluid ">
         <h1 class="text-center mt-5 pt-5" style="font-family: Lobster, cursive;font-size: 40px">Mes Competences</h1>
-        <div class="row mt-5">
+        <div class="row mt-5" data-aos="fade-up">
             {% for competence in competences %}
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" >
                     <i class="{{ competence.description }}" style="font-size: 160px"></i>
                     <h2 style="font-family: Lobster, cursive;">{{ competence.titre }}</h2>
                 </div>

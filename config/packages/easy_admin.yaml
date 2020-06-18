@@ -28,7 +28,7 @@ easy_admin:
            fields:
              - { property: 'imageFile', type: 'vich_image', base_path: '%uploads_path%'}
              - { property: 'titre'}
-             - { property: 'description', type: 'text-editor', css_class: 'btn btn-danger'}
+             - { property: 'description'}
 
 
 

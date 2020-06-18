@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}parcours{% endblock %}
+{% block title %}Mes parcours{% endblock %}
 {% block body %}
     <body class="bg-warning">
     <div class="container-fluid">
         <h1 class="text-center mt-5 pt-5" style="font-family: Lobster, cursive;font-size: 40px">Mes Parcours</h1>
-        <div class="row mt-5">
+        <div class="row mt-5" data-aos="fade-down">
             {% for education in educations %}
                <div class="col-md-12 mt-5">
                    <div class="card shadow-lg border-0 bg-warning" >
@@ -13,10 +13,10 @@
                            {{ education.nom }}
                        </h1>
                        <div class="card-body bg-warning shadow-lg" style="border-radius: 10px">
-                           <blockquote class="blockquote mb-0">
+                           <blockquote class="blockquote mb-0 " >
                                <h1>{{ education.diplome }}</h1>
                                <p>{{ education.detail }}</p>
-                               <footer class="blockquote-footer ">{{ education.dateDeDebut|date('m/d/Y') }}-{{ education.dateDeFin|date('m/d/y') }}</footer>
+                               <footer class="blockquote-footer text-dark">{{ education.dateDeDebut|date('m/d/Y') }}-{{ education.dateDeFin|date('m/d/y') }}</footer>
                            </blockquote>
                        </div>
                    </div>

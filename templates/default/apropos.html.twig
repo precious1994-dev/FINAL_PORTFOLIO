@@ -4,13 +4,13 @@
 
 {% block body %}
     <body class="bg-warning">
-    <h1 class="pt-5 mt-5 text-center header-apropos" style="font-family: Lobster, cursive;font-size: 40px">Mes Apropos</h1>
-    <div class="row mt-5">
-        <div class="col-md-6 mt-3 text-center">
-                <img src="{{ asset('/img/banner-image.png') }}" class="rounded img-apropos " style="height: 60%" alt="Apropos" >
+    <h1 class="pt-5 mt-5 text-center header-apropos" style="font-family: Lobster, cursive;font-size: 40px"> Apropos</h1>
+    <div class="row mt-5" data-aos="fade-down">
+        <div class="col-md-6  text-center">
+                <img src="{{ asset('/img/banner-image.png') }}" class="rounded img-apropos " style="height: 50%;" alt="Apropos" >
             </div>
             <div class="col-md-6 ">
-               <p class="font-weight-normal">{{ personne.description }}</p>
+               <p class="font-weight-bold" style="font-family:'Philosopher', sans-serif; font-size: 23px">{{ personne.description }}</p>
                 <a href="https://github.com/precious1994-dev" target="_blank" class="text-dark"><i class="fab fa-github" style="font-size: 37px"></i></a>
                 <a href="https://www.linkedin.com/in/precious-uzoaru-5448b6142/" target="_blank" class="text-dark"><i class="fab fa-linkedin pl-4" style="font-size: 37px"></i></a>
                 <a href="https://www.instagram.com/precious.cosmas/" target="_blank" class="text-dark"><i class="fab fa-instagram pl-4" style="font-size: 37px"></i></a>

@@ -9,27 +9,28 @@
         <div class="row">
             {#   icon fontawsome    #}
             <div class="col-md-6 text-center ">
-                <i class="fas fa-code text-center code-icon mt-5" style="font-size:358px;padding-top: 45px"></i>
+                <i class="fas fa-code text-center code-icon mt-5 pt-5" style="font-size:358px;padding-top: 45px"></i>
             </div>
             {# fin de fontawesome #}
 
             {# Titre #}
             <div class="col-md-6 mt-5 ">
-                <h1 class="text-center dev" style="margin-top: 80px;font-family: Lobster, cursive; font-size: 50px"> Bonjour Precious <br>Developeur Integrateur Junior</h1>
+                <h1 class="text-center " style="margin-top: 80px;font-family: Lobster, cursive; font-size: 50px" > Bonjour Precious
+                    <br><span class="animate"></span></h1>
                 {# fin de mon Titre #}
 
                 {#button pour mon formulaire#}
                 <div class="row text-center ">
                     <div class="col-md-6">
                         <a href="{{ path('contact') }}">
-                        <button type="button" class="btn btn-warning text-center shadow px-5 mt-4 font-weight-bold" data-toggle="modal" data-target="#exampleModal">Contact <i class="fas fa-handshake ml-2 mt-2" ></i></button></a>
+                        <button type="button" class=" btn btn-warning text-center shadow px-5 mt-4 font-weight-bold " data-toggle="modal" data-target="#exampleModal" id="button1">Contact <i class="fas fa-handshake ml-2 mt-2" ></i></button></a>
                         {# fin de mon button formulaire #}
 
                     </div>
                     <div class="col-md-6">
                         {# button pour telecharger mon CV #}
                         <a href="Mon cv/precious cv.pdf" target="_blank">
-                            <button type="button" class="btn btn-warning  shadow px-5 mt-4 font-weight-bold">Voir mon CV <i
+                            <button type="button" class="btn btn-warning  shadow px-5 mt-4 font-weight-bold" id="button2">Voir mon CV <i
                                         class="fas fa-cloud-download-alt"></i></button>
                         </a>
                     </div>
@@ -41,13 +42,13 @@
 
         {# section Apropos  #}
 
-        <h1 class="pt-5 mt-5 text-center header-apropos" style="font-family: Lobster, cursive;font-size: 40px">Apropos</h1>
-        <div class="row mt-5">
-            <div class="col-md-6 mt-3 text-center">
+        <h1 class="pt-5 mt-5 text-center" style="font-family: Lobster, cursive;font-size: 40px">Apropos</h1>
+        <div class="row mt-5 ">
+            <div class="col-md-6 text-center " data-aos="fade-up">
                 <img src="{{ asset('/img/banner-image.png') }}" class="rounded img-apropos " style="height: 60%" alt="Apropos" >
             </div>
-            <div class="col-md-6 ">
-                <p class="font-weight-normal">{{ personne.description }}</p>
+            <div class="col-md-6 " data-aos="fade-up">
+                <h4 class="font-weight-bold" style="font-family:'Philosopher', sans-serif; font-size: 27px">{{ personne.description }}</h4>
                 <a href="https://github.com/precious1994-dev" target="_blank" class="text-dark">   <i class="fab fa-github" style="font-size: 37px"></i></a>
                 <a href="https://www.linkedin.com/in/precious-uzoaru-5448b6142/" target="_blank" class="text-dark">  <i class="fab fa-linkedin pl-4" style="font-size: 37px"></i></a>
                 <a href="https://www.instagram.com/precious.cosmas/" target="_blank" class="text-dark"> <i class="fab fa-instagram pl-4 " style="font-size: 37px"></i></a>
@@ -56,13 +57,13 @@
           {# fin section apropos  #}
 
 
-                    {# parcour #}
+        {# parcour #}
         <div class="container-fluid ">
-            <h1 class="text-center pt-3 " style="font-family: Lobster, cursive;font-size: 40px">Parcours</h1>
+            <h1 class="text-center" style="font-family: Lobster, cursive;font-size: 40px">Mes Parcours</h1>
             <div class="row ">
                 {% for education in educations %}
                     <div class="col-md-12 mt-4">
-                        <div class="card shadow-lg border-0 bg-warning mt-4 " >
+                        <div class="card shadow-lg border-0 bg-warning mt-4" data-aos="fade-down">
                             <h1 class="card-header border-dark">
                                 {{ education.nom }}
                             </h1>
@@ -70,12 +71,11 @@
                                 <blockquote class="blockquote mb-0">
                                     <h1>{{ education.diplome }}</h1>
                                     <p>{{ education.detail }}</p>
-                                    <footer class="blockquote-footer">{{ education.dateDeDebut|date('m/d/Y') }}-{{ education.dateDeFin|date('m/d/y') }}</footer>
+                                    <footer class="blockquote-footer text-dark">{{ education.dateDeDebut|date('m/d/Y') }}-{{ education.dateDeFin|date('m/d/y') }}</footer>
                                 </blockquote>
                             </div>
                         </div>
                     </div>
-
                 {% endfor %}
             </div>
         </div>
@@ -84,15 +84,14 @@
 
            {#  Realisation #}
         <div class="container-fluid mt-5">
-            <h1 class="text-center header-realisation" style="font-family: Lobster, cursive;font-size: 40px">Realisation</h1>
-            <div class="row  text-center">
+            <h1 class="text-center header-realisation" style="font-family: Lobster, cursive;font-size: 40px">Mes Realisation</h1>
+            <div class="row  text-center mt-5">
                 {% for realisation in realisations %}
                 <div class="col-md-4 ">
-                    <div class="card text-dark ml-2 text-lg-left mt-5 shadow-lg">
-                        <img src="{{ asset('public/files/' ~ realisation.filename()) }}" class="card-img" alt="...">
-                        <div class="card-img-overlay shadow">
-                            <h5 class="card-title">{{ realisation.titre }}</h5>
-                            <p class="card-text"></p>
+                    <div class="card mb-3 shadow-lg " data-aos="fade-left">
+                        <img src="{{ asset('public/files/' ~ realisation.filename()) }}" class="card-img-top" alt="...">
+                        <div class="card-body card-realisation">
+                            <h5 class="card-title  text-dark">{{ realisation.titre }}</h5>
                             <p class="card-text">{{ realisation.description }}</p>
                         </div>
                     </div>
@@ -103,8 +102,8 @@
          {#  fin de realisation  #}
 
             {#  competence  #}
-            <h1 class="text-center mt-5 header-apropos" style="font-family: Lobster, cursive;font-size: 40px">Competence</h1>
-        <div class="row mt-5">
+            <h1 class="text-center mt-5 header-apropos" style="font-family: Lobster, cursive;font-size: 40px">Mes Competence</h1>
+        <div class="row mt-5" data-aos="fade-up">
             {% for competence in competences %}
                 <div class="col-md-4 text-center">
                     <i class="{{ competence.description }}" style="font-size: 160px"></i>
@@ -118,7 +117,7 @@
     {% block footer %}
         <div class="row mt-5" style="background-color: black">
             <div class="col mt-3">
-                <p class="text-center text-white">Developer par precious @2020</p>
+                <p class="text-center text-white">Developer par precious.uzoaru @2020 <br><span class="text-center text-white mt-3"><i class="far fa-paper-plane pr-2"></i>Email:precious.uzoaru@yahoo.com</span></p>
             </div>
         </div>
     {% endblock %}
